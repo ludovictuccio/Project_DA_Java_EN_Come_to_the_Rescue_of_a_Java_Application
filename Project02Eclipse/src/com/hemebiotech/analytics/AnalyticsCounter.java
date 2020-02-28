@@ -23,6 +23,7 @@ public class AnalyticsCounter {
 			writer.writeSymptoms(tmap);
 
 		} catch (IOException e) {
+			System.err.println("An error was occured. Please check the filepath root.");
 			e.printStackTrace();
 		}
 	}

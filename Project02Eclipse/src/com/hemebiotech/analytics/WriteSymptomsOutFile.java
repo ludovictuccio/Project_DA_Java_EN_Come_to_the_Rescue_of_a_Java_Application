@@ -22,16 +22,16 @@ public class WriteSymptomsOutFile implements ISymptomWriter {
 	}
 
 	@Override
-	public void writeSymptoms(TreeMap<String, Integer> tmap) {
+	public void writeSymptoms(TreeMap<String, Integer> tmap) throws IOException {
 
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(resultsOut))) {
 
 			for (Map.Entry<String, Integer> entry : tmap.entrySet()) {
-				writer.write(entry.getKey() + " : " + entry.getValue() + "\r\n");
+
+				// Write capitalizing the first letter
+				writer.write(entry.getKey().substring(0, 1).toUpperCase() + entry.getKey().substring(1) + " : "
+						+ entry.getValue() + "\r\n");
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
-		return;
 	}
 }

@@ -17,13 +17,10 @@ public class CounterSymptoms implements ISymptomCounter {
 		// Display the list to organize it in the map
 		for (String line : list) {
 
-			// Capitalize the first letter
-			String uppercaseLine = line.substring(0, 1).toUpperCase() + line.substring(1);
-
-			if (!map.containsKey(uppercaseLine)) {
-				map.put(uppercaseLine, 1);
+			if (!map.containsKey(line)) {
+				map.put(line, 1);
 			} else {
-				map.put(uppercaseLine, map.get(uppercaseLine) + 1);
+				map.put(line, map.get(line) + 1);
 			}
 		}
 		return map;
