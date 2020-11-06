@@ -1,2 +1,3 @@
-# Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application
-Version 1.2
+# OpenClassrooms - Project 2
+
+Application used to count and sort without duplicates in alphabetical order a list of symptoms in a text file.
